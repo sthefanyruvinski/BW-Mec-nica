@@ -36,7 +36,7 @@ export function Header({ content }: { content: SiteContent }) {
       <img
         src={content.logoUrl}
         alt="BW Mecânica"
-        style={{ height: 64, width: "auto", display: "block" }}
+        style={{ height: 60, width: "auto", display: "block" }}
       />
       <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
         <a

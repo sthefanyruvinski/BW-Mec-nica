@@ -16,7 +16,7 @@ export function Footer({ content }: { content: SiteContent }) {
         gap: 16,
       }}
     >
-      <img src={content.logoUrl} alt="BW Mecânica" style={{ height: 100, width: "auto", opacity: 0.9 }} />
+      <img src={content.logoUrl} alt="BW Mecânica" style={{ height: 44, width: "auto", opacity: 0.9 }} />
       <div style={{ color: "#7d8bab", fontSize: 13 }}>
         {content.location.addressLine1} · {content.location.addressLine2.split(",")[0]}
       </div>
