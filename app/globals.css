@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos do site público (BW Mecânica), escopados para não afetar o /admin */
+.bw-site {
+  margin: 0;
+  background: #f5f7fa;
+  font-family: var(--font-inter), sans-serif;
+  color: #14213d;
+}
+.bw-site a {
+  color: #2f7fc0;
+  text-decoration: none;
+}
+.bw-site a:hover {
+  color: #1f5a91;
+}
+.bw-site h1,
+.bw-site h2,
+.bw-site h3 {
+  font-family: var(--font-barlow-condensed), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.bw-site ::selection {
+  background: #2f7fc0;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .bw-site .bw-nav-links {
+    display: none;
+  }
+  .bw-site .bw-hero {
+    height: auto !important;
+    min-height: 560px;
+  }
+  .bw-site .bw-hero-inner {
+    max-width: 100% !important;
+    padding: 80px 24px 40px !important;
+  }
+  .bw-site .bw-hero-h1 {
+    font-size: 40px !important;
+  }
+  .bw-site .bw-hero-p {
+    font-size: 16px !important;
+  }
+  .bw-site .bw-trust {
+    gap: 16px !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 20px 24px !important;
+  }
+  .bw-site .bw-section {
+    padding: 56px 24px !important;
+  }
+  .bw-site .bw-section-title {
+    font-size: 28px !important;
+  }
+  .bw-site .bw-grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .bw-site .bw-local-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .bw-site .bw-cta {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 48px 24px !important;
+  }
+  .bw-site .bw-cta-title {
+    font-size: 26px !important;
+  }
+  .bw-site .bw-footer {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    padding: 32px 24px !important;
+  }
+}
