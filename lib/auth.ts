@@ -1,10 +1,8 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { authConfig } from "./auth.config";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  ...authConfig,
   providers: [
     Credentials({
       credentials: {
@@ -22,4 +20,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/admin/login",
+  },
+  secret: process.env.AUTH_SECRET,
 });
