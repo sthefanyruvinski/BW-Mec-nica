@@ -42,7 +42,7 @@ export function HeroForm({ content }: { content: SiteContent }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <Field label="Título da aba do navegador" value={siteTitle} onChange={setSiteTitle} />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field
           label="Número do WhatsApp (só dígitos, com DDI 55)"
           value={whatsappNumber}
@@ -51,7 +51,7 @@ export function HeroForm({ content }: { content: SiteContent }) {
         <Field label="Telefone exibido no site" value={phoneDisplay} onChange={setPhoneDisplay} />
       </div>
       <Field label="Selo acima do título (ex: Terra Roxa · PR)" value={badge} onChange={setBadge} />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Título principal" value={titleMain} onChange={setTitleMain} />
         <Field label="Título em destaque (azul)" value={titleHighlight} onChange={setTitleHighlight} />
       </div>

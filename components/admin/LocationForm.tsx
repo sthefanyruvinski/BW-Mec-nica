@@ -32,7 +32,7 @@ export function LocationForm({ content }: { content: SiteContent }) {
     <form onSubmit={handleSubmit} className="space-y-5">
       <Field label="Endereço — linha 1" value={addressLine1} onChange={setAddressLine1} />
       <Field label="Endereço — linha 2 (cidade, UF, CEP)" value={addressLine2} onChange={setAddressLine2} />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Horário — semana" value={hoursWeekday} onChange={setHoursWeekday} />
         <Field label="Horário — sábado" value={hoursSaturday} onChange={setHoursSaturday} />
       </div>

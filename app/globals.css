@@ -177,3 +177,11 @@ html {
     padding: 32px 24px !important;
   }
 }
+
+/* Tablets: os cartões de serviço e o catálogo usam 2 colunas em vez de
+   empilhar 1 por linha (que desperdiça muito espaço horizontal). */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bw-site .bw-grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

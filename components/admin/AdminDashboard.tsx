@@ -23,12 +23,12 @@ export function AdminDashboard({ content }: { content: SiteContent }) {
 
   return (
     <div>
-      <nav className="mb-6 flex gap-1 border-b border-slate-200">
+      <nav className="mb-6 flex gap-1 overflow-x-auto border-b border-slate-200">
         {TABS.map((t) => (
           <button
             key={t.key}
             onClick={() => setTab(t.key)}
-            className={`px-4 py-2 text-sm font-medium border-b-2 -mb-px ${
+            className={`flex-none whitespace-nowrap px-4 py-2 text-sm font-medium border-b-2 -mb-px ${
               tab === t.key
                 ? "border-slate-900 text-slate-900"
                 : "border-transparent text-slate-500 hover:text-slate-800"
