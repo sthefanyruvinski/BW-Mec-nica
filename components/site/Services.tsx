@@ -8,7 +8,7 @@ export function Services({ content }: { content: SiteContent }) {
     <section
       id="servicos"
       className="bw-section"
-      style={{ padding: "96px 40px", background: "linear-gradient(to bottom, #0d1b3a 0%, #ffffff 140px, #ffffff 100%)" }}
+      style={{ padding: "96px 40px", background: "linear-gradient(to bottom, #0d1b3a 0%, #ffffff 90px, #ffffff 100%)" }}
     >
       <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 56px" }}>
         <h2 style={{ fontSize: 15, color: "#2f7fc0", fontWeight: 700, letterSpacing: "0.12em", margin: "0 0 12px" }}>

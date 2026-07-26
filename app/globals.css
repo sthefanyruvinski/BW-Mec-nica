@@ -136,6 +136,11 @@ html {
   .bw-site .bw-nav-links {
     display: none;
   }
+  .bw-site header {
+    position: static !important;
+    background: #0d1b3a !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25) !important;
+  }
   .bw-site .bw-hero {
     height: auto !important;
     min-height: 560px;

@@ -7,7 +7,7 @@ export function Cta({ content }: { content: SiteContent }) {
     <section
       className="bw-cta"
       style={{
-        background: "linear-gradient(to bottom, #ffffff 0%, #0d1b3a 140px, #0d1b3a 100%)",
+        background: "linear-gradient(to bottom, #ffffff 0%, #0d1b3a 90px, #0d1b3a 100%)",
         padding: "70px 40px",
         display: "flex",
         alignItems: "center",

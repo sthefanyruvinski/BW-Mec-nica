@@ -31,8 +31,7 @@ export function Reveal({ children }: { children: React.ReactNode }) {
       ref={ref}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(28px)",
-        transition: "opacity 0.7s ease, transform 0.7s ease",
+        transition: "opacity 0.7s ease",
       }}
     >
       {children}
