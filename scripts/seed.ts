@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./load-env";
 import { db } from "../lib/db";
 import { siteContent } from "../lib/schema";
 import { DEFAULT_CONTENT } from "../lib/content-schema";
