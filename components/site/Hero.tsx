@@ -32,6 +32,7 @@ export function Hero({ content }: { content: SiteContent }) {
           justifyContent: "center",
           padding: "0 40px",
           maxWidth: 640,
+          animation: "bwFadeInUp 0.8s ease both",
         }}
       >
         <div
@@ -67,6 +68,7 @@ export function Hero({ content }: { content: SiteContent }) {
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
           <a
             href={waLink}
+            className="bw-btn"
             style={{
               background: "#2f7fc0",
               color: "#fff",
@@ -83,6 +85,7 @@ export function Hero({ content }: { content: SiteContent }) {
           </a>
           <a
             href={telLink}
+            className="bw-btn"
             style={{
               border: "1px solid rgba(255,255,255,0.3)",
               color: "#fff",

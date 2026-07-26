@@ -50,6 +50,81 @@ body {
   background: #2f7fc0;
   color: #fff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Movimento com propósito: hover discreto, sem bounce/elastic */
+.bw-site a,
+.bw-site button,
+.bw-site summary {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+.bw-site .bw-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(47, 127, 192, 0.28);
+}
+.bw-site .bw-btn:active {
+  transform: translateY(0);
+}
+.bw-site .bw-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.bw-site .bw-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(13, 27, 58, 0.1);
+}
+.bw-site .bw-catalog-card:hover {
+  transform: translateY(-2px);
+}
+.bw-site .bw-link-arrow .bw-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.bw-site .bw-link-arrow:hover .bw-arrow {
+  transform: translateX(4px);
+}
+.bw-site summary {
+  list-style: none;
+}
+.bw-site summary::-webkit-details-marker {
+  display: none;
+}
+.bw-site .bw-chevron {
+  transition: transform 0.25s ease;
+  flex: none;
+}
+.bw-site details[open] .bw-chevron {
+  transform: rotate(180deg);
+}
+.bw-site details[open] > ul {
+  animation: bwFadeIn 0.35s ease;
+}
+@keyframes bwFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bwFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bw-site * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 @media (max-width: 900px) {
   .bw-site .bw-nav-links {
     display: none;

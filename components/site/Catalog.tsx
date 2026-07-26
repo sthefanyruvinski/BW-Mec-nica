@@ -23,6 +23,7 @@ export function Catalog({ content }: { content: SiteContent }) {
           <details
             key={category.id}
             name="catalogo"
+            className="bw-catalog-card"
             style={{ background: "#132345", borderRadius: 10, padding: "22px 24px", color: "#dce6f5" }}
           >
             <summary
@@ -41,6 +42,20 @@ export function Catalog({ content }: { content: SiteContent }) {
             >
               <CategoryIcon icon={category.icon} size={20} />
               {category.name}
+              <svg
+                className="bw-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#4a9bdc"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ marginLeft: "auto" }}
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </summary>
             <ul style={{ margin: "16px 0 0", padding: 0, listStyle: "none", fontSize: 13.5, color: "#b7c4dc", lineHeight: 1.4 }}>
               {category.items.map((item, i) => (

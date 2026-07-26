@@ -21,6 +21,7 @@ export function Services({ content }: { content: SiteContent }) {
         {content.services.map((service, i) => (
           <div
             key={i}
+            className="bw-card"
             style={{ border: "1px solid #e6eaf1", borderRadius: 10, padding: "36px 34px", background: "#fbfcfe" }}
           >
             <div
@@ -71,8 +72,8 @@ export function Services({ content }: { content: SiteContent }) {
                 </li>
               ))}
             </ul>
-            <a href={waLink} style={{ color: "#2f7fc0", fontWeight: 700, fontSize: 14.5 }}>
-              {service.ctaLabel} →
+            <a href={waLink} className="bw-link-arrow" style={{ color: "#2f7fc0", fontWeight: 700, fontSize: 14.5 }}>
+              {service.ctaLabel} <span className="bw-arrow">→</span>
             </a>
           </div>
         ))}

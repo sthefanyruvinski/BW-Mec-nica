@@ -54,6 +54,7 @@ export function Location({ content }: { content: SiteContent }) {
           </div>
           <a
             href={waLink}
+            className="bw-btn"
             style={{
               marginTop: 8,
               background: "#2f7fc0",

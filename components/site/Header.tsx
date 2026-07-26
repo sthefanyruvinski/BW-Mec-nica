@@ -46,6 +46,7 @@ export function Header({ content }: { content: SiteContent }) {
         </a>
         <a
           href={waLink}
+          className="bw-btn"
           style={{
             background: "#2f7fc0",
             color: "#fff",

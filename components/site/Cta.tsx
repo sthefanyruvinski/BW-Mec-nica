@@ -24,6 +24,7 @@ export function Cta({ content }: { content: SiteContent }) {
       </h3>
       <a
         href={waLink}
+        className="bw-btn"
         style={{ background: "#2f7fc0", color: "#fff", fontWeight: 700, fontSize: 17, padding: "16px 32px", borderRadius: 6 }}
       >
         Agende pelo WhatsApp

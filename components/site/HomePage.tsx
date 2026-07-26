@@ -7,6 +7,7 @@ import { Catalog } from "./Catalog";
 import { Location } from "./Location";
 import { Cta } from "./Cta";
 import { Footer } from "./Footer";
+import { Reveal } from "./Reveal";
 
 export function HomePage({ content }: { content: SiteContent }) {
   return (
@@ -15,10 +16,18 @@ export function HomePage({ content }: { content: SiteContent }) {
         <Header content={content} />
         <Hero content={content} />
         <Trust content={content} />
-        <Services content={content} />
-        <Catalog content={content} />
-        <Location content={content} />
-        <Cta content={content} />
+        <Reveal>
+          <Services content={content} />
+        </Reveal>
+        <Reveal>
+          <Catalog content={content} />
+        </Reveal>
+        <Reveal>
+          <Location content={content} />
+        </Reveal>
+        <Reveal>
+          <Cta content={content} />
+        </Reveal>
         <Footer content={content} />
       </div>
     </div>
