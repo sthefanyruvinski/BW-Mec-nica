@@ -85,6 +85,13 @@ html {
 .bw-site .bw-link-arrow:hover .bw-arrow {
   transform: translateX(4px);
 }
+.bw-site .bw-badge-link {
+  cursor: pointer;
+}
+.bw-site .bw-badge-link:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
 .bw-site summary {
   list-style: none;
 }

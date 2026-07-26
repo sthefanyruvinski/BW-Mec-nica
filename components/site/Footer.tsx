@@ -7,7 +7,7 @@ export function Footer({ content }: { content: SiteContent }) {
     <footer
       className="bw-footer"
       style={{
-        background: "#0a1530",
+        background: "linear-gradient(to bottom, #0d1b3a 0%, #0a1530 60px, #0a1530 100%)",
         padding: "36px 40px",
         display: "flex",
         alignItems: "center",

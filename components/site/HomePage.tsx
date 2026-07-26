@@ -8,6 +8,7 @@ import { Location } from "./Location";
 import { Cta } from "./Cta";
 import { Footer } from "./Footer";
 import { Reveal } from "./Reveal";
+import { WhatsAppFab } from "./WhatsAppFab";
 
 export function HomePage({ content }: { content: SiteContent }) {
   return (
@@ -30,6 +31,7 @@ export function HomePage({ content }: { content: SiteContent }) {
         </Reveal>
         <Footer content={content} />
       </div>
+      <WhatsAppFab content={content} />
     </div>
   );
 }

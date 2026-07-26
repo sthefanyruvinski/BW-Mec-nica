@@ -3,6 +3,10 @@ import type { SiteContent } from "@/lib/content-schema";
 export function Hero({ content }: { content: SiteContent }) {
   const waLink = `https://wa.me/${content.whatsappNumber}`;
   const telLink = `tel:+${content.whatsappNumber}`;
+  const mapsQuery = encodeURIComponent(
+    `${content.location.addressLine1}, ${content.location.addressLine2}`
+  );
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 
   return (
     <section className="bw-hero" style={{ position: "relative", height: 640, overflow: "hidden" }}>
@@ -35,7 +39,11 @@ export function Hero({ content }: { content: SiteContent }) {
           animation: "bwFadeInUp 0.8s ease both",
         }}
       >
-        <div
+        <a
+          href={mapsLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bw-badge-link"
           style={{
             display: "inline-block",
             background: "rgba(47,127,192,0.18)",
@@ -52,7 +60,7 @@ export function Hero({ content }: { content: SiteContent }) {
           }}
         >
           {content.hero.badge}
-        </div>
+        </a>
         <h1
           className="bw-hero-h1"
           style={{ color: "#fff", fontSize: 64, lineHeight: 1, fontWeight: 800, margin: "0 0 22px" }}

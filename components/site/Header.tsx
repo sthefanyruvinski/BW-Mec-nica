@@ -1,20 +1,36 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import type { SiteContent } from "@/lib/content-schema";
 
 export function Header({ content }: { content: SiteContent }) {
   const waLink = `https://wa.me/${content.whatsappNumber}`;
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 80);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
       style={{
-        position: "sticky",
+        position: "fixed",
         top: 0,
+        left: 0,
+        right: 0,
         zIndex: 50,
-        background: "#0d1b3a",
+        background: scrolled ? "#0d1b3a" : "transparent",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "14px 24px",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.25)",
+        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.25)" : "none",
+        transition: "background 0.3s ease, box-shadow 0.3s ease",
       }}
     >
       <img
