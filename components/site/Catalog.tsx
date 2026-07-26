@@ -6,7 +6,11 @@ export function Catalog({ content }: { content: SiteContent }) {
     <section
       id="oficina"
       className="bw-section"
-      style={{ padding: "96px 40px", background: "linear-gradient(to bottom, #ffffff 0%, #0d1b3a 90px, #0d1b3a 100%)" }}
+      style={{
+        padding: "96px 40px",
+        background:
+          "linear-gradient(to bottom, #ffffff 0, #ffffff 90px, #d6dde5 150px, #47597b 195px, #0d1b3a 225px, #0d1b3a 100%)",
+      }}
     >
       <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 56px" }}>
         <h2 style={{ fontSize: 15, color: "#4a9bdc", fontWeight: 700, letterSpacing: "0.12em", margin: "0 0 12px" }}>
