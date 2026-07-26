@@ -14,7 +14,7 @@ export function IconSelect({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as IconKey)}
-        className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+        className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
       >
         {ICON_KEYS.map((key) => (
           <option key={key} value={key}>
