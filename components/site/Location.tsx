@@ -12,8 +12,7 @@ export function Location({ content }: { content: SiteContent }) {
       className="bw-local-grid bw-section"
       style={{
         padding: "96px 40px",
-        background:
-          "linear-gradient(to bottom, #0d1b3a 0, #0d1b3a 90px, #47597b 150px, #d6dde5 195px, #ffffff 225px, #ffffff 100%)",
+        background: "#fff",
         display: "grid",
         gridTemplateColumns: "0.9fr 1.1fr",
         gap: 48,
