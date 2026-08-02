@@ -25,57 +25,64 @@ export function Header({ content }: { content: SiteContent }) {
         right: 0,
         zIndex: 50,
         background: scrolled ? "#0d1b3a" : "transparent",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
         padding: "14px 24px",
         boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.25)" : "none",
         transition: "background 0.3s ease, box-shadow 0.3s ease",
       }}
     >
-      <img
-        src={content.logoUrl}
-        alt="BW Mecânica"
-        style={{ height: 60, width: "auto", display: "block" }}
-      />
-      <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
-        <a
-          href="#servicos"
-          className="bw-nav-links"
-          style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
-        >
-          Serviços
-        </a>
-        <a
-          href="#oficina"
-          className="bw-nav-links"
-          style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
-        >
-          Todos os serviços
-        </a>
-        <a
-          href="#local"
-          className="bw-nav-links"
-          style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
-        >
-          Localização
-        </a>
-        <a
-          href={waLink}
-          className="bw-btn"
-          style={{
-            background: "#2f7fc0",
-            color: "#fff",
-            fontWeight: 700,
-            fontSize: 15,
-            padding: "10px 22px",
-            borderRadius: 4,
-            whiteSpace: "nowrap",
-          }}
-        >
-          WhatsApp
-        </a>
-      </nav>
+      <div
+        style={{
+          maxWidth: 1440,
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <img
+          src={content.logoUrl}
+          alt="BW Mecânica"
+          style={{ height: 60, width: "auto", display: "block" }}
+        />
+        <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          <a
+            href="#servicos"
+            className="bw-nav-links"
+            style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
+          >
+            Serviços
+          </a>
+          <a
+            href="#oficina"
+            className="bw-nav-links"
+            style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
+          >
+            Todos os serviços
+          </a>
+          <a
+            href="#local"
+            className="bw-nav-links"
+            style={{ color: "#dce6f5", fontWeight: 600, fontSize: 15 }}
+          >
+            Localização
+          </a>
+          <a
+            href={waLink}
+            className="bw-btn"
+            style={{
+              background: "#2f7fc0",
+              color: "#fff",
+              fontWeight: 700,
+              fontSize: 15,
+              padding: "10px 22px",
+              borderRadius: 4,
+              whiteSpace: "nowrap",
+            }}
+          >
+            WhatsApp
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }

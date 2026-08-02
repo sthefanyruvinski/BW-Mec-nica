@@ -31,80 +31,82 @@ export function Hero({ content }: { content: SiteContent }) {
         style={{
           position: "relative",
           height: "100%",
+          maxWidth: 1440,
+          margin: "0 auto",
+          padding: "0 40px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "0 40px",
-          maxWidth: 640,
-          animation: "bwFadeInUp 0.8s ease both",
         }}
       >
-        <a
-          href={mapsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bw-badge-link"
-          style={{
-            display: "inline-block",
-            background: "rgba(47,127,192,0.18)",
-            border: "1px solid rgba(47,127,192,0.5)",
-            color: "#7fb8e6",
-            fontWeight: 600,
-            fontSize: 13,
-            letterSpacing: "0.08em",
-            padding: "6px 14px",
-            borderRadius: 100,
-            textTransform: "uppercase",
-            marginBottom: 24,
-            width: "fit-content",
-          }}
-        >
-          {content.hero.badge}
-        </a>
-        <h1
-          className="bw-hero-h1"
-          style={{ color: "#fff", fontSize: 64, lineHeight: 1, fontWeight: 800, margin: "0 0 22px" }}
-        >
-          {content.hero.titleMain} <span style={{ color: "#4a9bdc" }}>{content.hero.titleHighlight}</span>
-        </h1>
-        <p
-          className="bw-hero-p"
-          style={{ color: "#b7c4dc", fontSize: 19, lineHeight: 1.6, maxWidth: 520, margin: "0 0 36px" }}
-        >
-          {content.hero.subtitle}
-        </p>
-        <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+        <div style={{ maxWidth: 640, animation: "bwFadeInUp 0.8s ease both" }}>
           <a
-            href={waLink}
-            className="bw-btn"
+            href={mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bw-badge-link"
             style={{
-              background: "#2f7fc0",
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: 17,
-              padding: "16px 30px",
-              borderRadius: 6,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 10,
+              display: "inline-block",
+              background: "rgba(47,127,192,0.18)",
+              border: "1px solid rgba(47,127,192,0.5)",
+              color: "#7fb8e6",
+              fontWeight: 600,
+              fontSize: 13,
+              letterSpacing: "0.08em",
+              padding: "6px 14px",
+              borderRadius: 100,
+              textTransform: "uppercase",
+              marginBottom: 24,
+              width: "fit-content",
             }}
           >
-            Agende pelo WhatsApp
+            {content.hero.badge}
           </a>
-          <a
-            href={telLink}
-            className="bw-btn"
-            style={{
-              border: "1px solid rgba(255,255,255,0.3)",
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: 17,
-              padding: "16px 30px",
-              borderRadius: 6,
-            }}
+          <h1
+            className="bw-hero-h1"
+            style={{ color: "#fff", fontSize: 64, lineHeight: 1, fontWeight: 800, margin: "0 0 22px" }}
           >
-            {content.phoneDisplay}
-          </a>
+            {content.hero.titleMain} <span style={{ color: "#4a9bdc" }}>{content.hero.titleHighlight}</span>
+          </h1>
+          <p
+            className="bw-hero-p"
+            style={{ color: "#b7c4dc", fontSize: 19, lineHeight: 1.6, maxWidth: 520, margin: "0 0 36px" }}
+          >
+            {content.hero.subtitle}
+          </p>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <a
+              href={waLink}
+              className="bw-btn"
+              style={{
+                background: "#2f7fc0",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 17,
+                padding: "16px 30px",
+                borderRadius: 6,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+              }}
+            >
+              Agende pelo WhatsApp
+            </a>
+            <a
+              href={telLink}
+              className="bw-btn"
+              style={{
+                border: "1px solid rgba(255,255,255,0.3)",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 17,
+                padding: "16px 30px",
+                borderRadius: 6,
+              }}
+            >
+              {content.phoneDisplay}
+            </a>
+          </div>
         </div>
       </div>
     </section>

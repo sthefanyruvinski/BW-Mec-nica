@@ -13,24 +13,22 @@ import { WhatsAppFab } from "./WhatsAppFab";
 export function HomePage({ content }: { content: SiteContent }) {
   return (
     <div className="bw-site">
-      <div style={{ maxWidth: 1440, margin: "0 auto", background: "#fff", overflow: "hidden" }}>
-        <Header content={content} />
-        <Hero content={content} />
-        <Trust content={content} />
-        <Reveal>
-          <Services content={content} />
-        </Reveal>
-        <Reveal>
-          <Catalog content={content} />
-        </Reveal>
-        <Reveal>
-          <Location content={content} />
-        </Reveal>
-        <Reveal>
-          <Cta content={content} />
-        </Reveal>
-        <Footer content={content} />
-      </div>
+      <Header content={content} />
+      <Hero content={content} />
+      <Trust content={content} />
+      <Reveal>
+        <Services content={content} />
+      </Reveal>
+      <Reveal>
+        <Catalog content={content} />
+      </Reveal>
+      <Reveal>
+        <Location content={content} />
+      </Reveal>
+      <Reveal>
+        <Cta content={content} />
+      </Reveal>
+      <Footer content={content} />
       <WhatsAppFab content={content} />
     </div>
   );

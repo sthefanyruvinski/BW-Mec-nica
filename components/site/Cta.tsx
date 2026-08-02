@@ -4,31 +4,33 @@ export function Cta({ content }: { content: SiteContent }) {
   const waLink = `https://wa.me/${content.whatsappNumber}`;
 
   return (
-    <section
-      className="bw-cta"
-      style={{
-        background: "#0d1b3a",
-        padding: "70px 40px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        flexWrap: "wrap",
-        gap: 24,
-      }}
-    >
-      <h3
-        className="bw-cta-title"
-        style={{ color: "#fff", fontSize: 34, fontWeight: 800, margin: 0, textTransform: "none", maxWidth: 520 }}
+    <section className="bw-cta" style={{ background: "#0d1b3a", padding: "70px 40px" }}>
+      <div
+        className="bw-cta-inner"
+        style={{
+          maxWidth: 1440,
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: 24,
+        }}
       >
-        {content.cta.title}
-      </h3>
-      <a
-        href={waLink}
-        className="bw-btn"
-        style={{ background: "#2f7fc0", color: "#fff", fontWeight: 700, fontSize: 17, padding: "16px 32px", borderRadius: 6 }}
-      >
-        Agende pelo WhatsApp
-      </a>
+        <h3
+          className="bw-cta-title"
+          style={{ color: "#fff", fontSize: 34, fontWeight: 800, margin: 0, textTransform: "none", maxWidth: 520 }}
+        >
+          {content.cta.title}
+        </h3>
+        <a
+          href={waLink}
+          className="bw-btn"
+          style={{ background: "#2f7fc0", color: "#fff", fontWeight: 700, fontSize: 17, padding: "16px 32px", borderRadius: 6 }}
+        >
+          Agende pelo WhatsApp
+        </a>
+      </div>
     </section>
   );
 }

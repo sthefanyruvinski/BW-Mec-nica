@@ -10,6 +10,7 @@ export function Services({ content }: { content: SiteContent }) {
       className="bw-section"
       style={{ padding: "96px 40px", background: "#fff" }}
     >
+      <div style={{ maxWidth: 1440, margin: "0 auto" }}>
       <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 56px" }}>
         <h2 style={{ fontSize: 15, color: "#2f7fc0", fontWeight: 700, letterSpacing: "0.12em", margin: "0 0 12px" }}>
           O que fazemos
@@ -81,6 +82,7 @@ export function Services({ content }: { content: SiteContent }) {
             </a>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -175,18 +175,22 @@ html {
     gap: 32px !important;
   }
   .bw-site .bw-cta {
+    padding: 48px 24px !important;
+  }
+  .bw-site .bw-cta-inner {
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 48px 24px !important;
   }
   .bw-site .bw-cta-title {
     font-size: 26px !important;
   }
   .bw-site .bw-footer {
+    padding: 32px 24px !important;
+  }
+  .bw-site .bw-footer-inner {
     flex-direction: column;
     align-items: flex-start !important;
     gap: 16px !important;
-    padding: 32px 24px !important;
   }
 }
 
